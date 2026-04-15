@@ -4,7 +4,8 @@ import matplotlib as plt
 import seaborn as sns
 import networkx as nx
 
-import test
+import NetworkGraph
+G = NetworkGraph.G
 
 start_node = '101S'
 end_node = '120S'
