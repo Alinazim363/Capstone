@@ -1,8 +1,7 @@
 import networkx as nx
 import pandas as pd
-import NetworkGraph
 
-G = NetworkGraph.G
+from NetworkGraph import G
 
 # starting locations
 x1_start = '101S' 

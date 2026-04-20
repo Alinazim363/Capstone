@@ -70,7 +70,7 @@ merged_df['next_arrival_sec'] = merged_df['arrival_sec'].shift(-1)
 valid_edges = merged_df[merged_df['trip_id'] == merged_df['next_trip_id']].copy()
 valid_edges['travel_time'] = valid_edges['next_arrival_sec'] - valid_edges['departure_sec']
 
-# Log or handle negative or NaN travel times for debugging
+# Log or handle negative or NaN travel times
 invalid_travel_times = valid_edges[
     (valid_edges['travel_time'].isna()) | (valid_edges['travel_time'] <= 0)
 ]
