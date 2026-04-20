@@ -5,7 +5,7 @@ import seaborn as sns
 import networkx as nx
 
 # initialize the graph
-G = nx.Graph()
+G = nx.DiGraph()
 
 # helper function to convert time strings to seconds
 def time_to_seconds(time_str):

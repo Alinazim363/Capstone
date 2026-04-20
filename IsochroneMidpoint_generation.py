@@ -4,15 +4,15 @@ import pandas as pd
 from NetworkGraph import G
 
 # starting locations
-x1_start = '101S' 
-x2_start = 'F24N'
+user1_start = '101S' 
+user2_start = 'F24N'
 
-# generate the Isochrones (Returns a dictionary of {node_id: travel_time_in_seconds})
-x1_travel_times = nx.single_source_dijkstra_path_length(G, source=x1_start, weight='weight')
-x2_travel_times = nx.single_source_dijkstra_path_length(G, source=x2_start, weight='weight')
+# generate the Isochrones
+x1_travel_times = nx.single_source_dijkstra_path_length(G, source=user1_start, weight='weight')
+x2_travel_times = nx.single_source_dijkstra_path_length(G, source=user2_start, weight='weight')
 
-print(f"Jack can reach {len(x1_travel_times)} stations.")
-print(f"Jane can reach {len(x2_travel_times)} stations.")
+print(f"User 1 can reach {len(x1_travel_times)} stations.")
+print(f"User 2 can reach {len(x2_travel_times)} stations.")
 
 fair_venues = []
 
