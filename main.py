@@ -4,7 +4,7 @@ from NetworkGraph import G
 
 from geocoding import get_coordinates, find_nearest_station
 
-print("Welcome to SweetSpot Route Optimization!")
+print("Welcome to SweetSpot!")
 user_address1 = input("Enter address for User 1 (e.g., 'Times Square, NY'): ")
 user_address2 = input("Enter address for User 2 (e.g., 'Barclays Center, NY'): ")
 
