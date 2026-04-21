@@ -1,3 +1,4 @@
 __pycache__/ 
 .DS_Store
 *.json
+sweetspot_nlp_training_data.csv
