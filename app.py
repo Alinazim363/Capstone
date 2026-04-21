@@ -64,7 +64,7 @@ def get_itinerary(path):
 
 # --- 4. THE SWEETSPOT PIPELINE ---
 def run_sweetspot():
-    print("\n" + "="*50 + "\n🍹 WELCOME TO SWEETSPOT OPTIMIZATION 🍹\n" + "="*50)
+    print("\n" + "="*50 + "\n WELCOME TO SWEETSPOT \n" + "="*50)
     
     user_address1 = input("User 1 Address: ")
     user_address2 = input("User 2 Address: ")
