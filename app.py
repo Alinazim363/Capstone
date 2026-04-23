@@ -18,7 +18,7 @@ print("Loading Venue Database...")
 try:
     production_db = pd.read_json('yelp/sweetspot_production_db_v2.json', orient='records', lines=True)
 except FileNotFoundError:
-    print("❌ Error: 'sweetspot_production_db_v2.json' not found.")
+    print("Error: 'sweetspot_production_db_v2.json' not found.")
     exit()
 
 # --- 3. A* HEURISTIC & ITINERARY PARSER ---
@@ -42,7 +42,7 @@ def get_itinerary(path):
         
         if edge_type == 'walking_transfer':
             if current_leg_type == 'subway_transit':
-                steps.append(f"🚆 Take the {current_route} train for {stops_count} stops.")
+                steps.append(f"Take the {current_route} train for {stops_count} stops.")
             steps.append(f"🚶 Walk to {G.nodes[v]['name']} platform ({round(weight/60, 1)} mins).")
             current_leg_type = 'walking_transfer'
             stops_count, leg_time = 0, 0
@@ -50,16 +50,16 @@ def get_itinerary(path):
             routes = edge_data.get('routes', ['Unknown'])
             if current_leg_type != 'subway_transit' or current_route not in routes:
                 if current_leg_type == 'subway_transit':
-                    steps.append(f"🚆 Take the {current_route} train for {stops_count} stops.")
+                    steps.append(f"Take the {current_route} train for {stops_count} stops.")
                 current_route = routes[0]
-                steps.append(f"🟢 Board the {current_route} train at {G.nodes[u]['name']}.")
+                steps.append(f"Board the {current_route} train at {G.nodes[u]['name']}.")
             current_leg_type = 'subway_transit'
             stops_count += 1
             leg_time += weight
             
     if current_leg_type == 'subway_transit':
-        steps.append(f"🚆 Take the {current_route} train for {stops_count} stops.")
-    steps.append(f"🏁 Arrive at {G.nodes[path[-1]]['name']}.")
+        steps.append(f"Take the {current_route} train for {stops_count} stops.")
+    steps.append(f"Arrive at {G.nodes[path[-1]]['name']}.")
     return steps
 
 # --- 4. THE SWEETSPOT PIPELINE ---
@@ -90,7 +90,7 @@ def run_sweetspot():
                 fair_stations.append({'id': node, 'lat': G.nodes[node]['lat'], 'lon': G.nodes[node]['lon'], 't1': t1, 't2': t2})
                 
     if not fair_stations:
-        print("❌ No fair locations found.")
+        print("No fair locations found.")
         return
 
     # Task 2: Geographic Hard Filter
@@ -108,7 +108,7 @@ def run_sweetspot():
                 break
                 
     if not filtered_list: 
-        print("❌ No venues found near the fair transit stops.")
+        print("No venues found near the fair transit stops.")
         return
     
     # Task 3: Semantic Ranking
@@ -120,7 +120,7 @@ def run_sweetspot():
     results = sorted(filtered_list, key=lambda x: x['match'], reverse=True)[:10]
 
     print("\n" + "="*50)
-    print("✨ THE TOP 10 SWEETSPOT RECOMMENDATIONS ✨")
+    print("THE TOP 10 SWEETSPOT RECOMMENDATIONS")
     print("="*50)
     
     # Print the formatted Top 10 list
@@ -144,7 +144,7 @@ def run_sweetspot():
         choice_idx = int(choice) - 1
         if 0 <= choice_idx < len(results):
             top_v = results[choice_idx]
-            print(f"\n🗺️ Calculating A* routes to {top_v['name']}...")
+            print(f"\nCalculating A* routes to {top_v['name']}...")
             
             # Run A* dynamically based on user choice
             path1 = nx.astar_path(G, u1_start, top_v['nearest_hub']['id'], heuristic=astar_heuristic, weight='weight')
