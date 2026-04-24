@@ -3,6 +3,9 @@ from geopy.distance import geodesic
 
 from NetworkGraph import G
 
+# --- GEOCODING & NEAREST STATION FUNCTIONS ---
+# functions to geocode user addresses and find nearest subway stations in the graph
+
 def get_coordinates(address):
     geolocator = Nominatim(user_agent="sweetspot")
     try:
