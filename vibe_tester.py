@@ -11,15 +11,15 @@ print("Loading SweetSpot V2 Database...")
 # Ensure you are loading the updated V2 database!
 try:
     db = pd.read_json('yelp/sweetspot_production_db_v2.json', orient='records', lines=True)
-    print(f"✅ Loaded {len(db)} venues successfully.")
+    print(f"Loaded {len(db)} venues successfully.")
 except FileNotFoundError:
-    print("❌ Error: 'sweetspot_production_db_v2.json' not found. Ensure it is in the same folder.")
+    print("Error: 'sweetspot_production_db_v2.json' not found. Ensure it is in the same folder.")
     exit()
 
 # --- 2. THE SEARCH FUNCTION ---
 def test_vibe_search(query, top_k=5):
     print("\n" + "="*50)
-    print(f"🔍 SEARCHING: '{query}'")
+    print(f"SEARCHING: '{query}'")
     print("="*50)
     
     # Vectorize the query using Sentence-RoBERTa

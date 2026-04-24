@@ -1,4 +1,4 @@
 __pycache__/ 
 .DS_Store
-*.json
 sweetspot_nlp_training_data.csv
+yelp_academic_dataset_business.json 
