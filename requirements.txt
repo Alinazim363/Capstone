@@ -8,3 +8,4 @@ geopy
 folium
 streamlit-folium
 matplotlib
+seaborn
