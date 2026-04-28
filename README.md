@@ -1,8 +1,8 @@
-# SweetSpot 🚇
+# SweetSpot
 
-**SweetSpot** is a transit-aware meetup optimizer for New York City. Given two addresses, it uses the MTA subway graph to find the fairest meeting point — where neither person travels significantly longer than the other — then ranks nearby venues by semantic similarity to a natural-language "vibe" description.
+**SweetSpot** is a transit-aware meetup optimizer for New York City. Given two addresses, it uses the MTA subway graph to find the fairest meeting point, where neither person travels significantly longer than the other, then ranks nearby venues by semantic similarity to a natural-language "vibe" query.
 
-> 🌐 **Live Web App:** [sweetspotcapstone.streamlit.app](https://sweetspotcapstone.streamlit.app/)
+> **Live Web App:** [sweetspotcapstone.streamlit.app](https://sweetspotcapstone.streamlit.app/)
 
 ---
 
@@ -21,7 +21,7 @@
 
 | File | Description |
 |---|---|
-| `app.py` | **Main terminal application.** Full SweetSpot pipeline — geocoding, Dijkstra isochrones, NLP ranking, and A\* directions. Run this. |
+| `app.py` | **Main terminal application.** Full SweetSpot pipeline — geocoding, Dijkstra isochrones, NLP ranking, and A\* directions. |
 | `NetworkGraph.py` | Builds the directed MTA subway graph from GTFS data. Imported by all other modules. |
 | `geocoding.py` | Geocodes addresses using Nominatim and snaps coordinates to the nearest subway platform. |
 | `frontend.py` | Streamlit web frontend. Mirrors `app.py` logic with an interactive map and visual UI. |
@@ -75,7 +75,7 @@ pip install -r requirements.txt
 ## Running the App
 
 ```bash
-python app.py
+python3 app.py
 ```
 
 You will be prompted for:
@@ -90,26 +90,11 @@ The app will output the **Top 10 venue recommendations** ranked by vibe match, a
 
 ---
 
-## Running the Tests
-
-```bash
-# Unit tests (graph integrity, geocoding, NLP, geodesic math)
-python -m unittest tests/main_test.py -v
-
-# Isochrone test (interactive address input)
-python tests/isochrone_test.py
-
-# NLP vibe search diagnostics
-python tests/vibe_tester.py
-```
-
----
-
 ## Web Frontend
 
 A Streamlit-based frontend with an interactive Folium map is also available. It runs the same backend pipeline with a visual interface.
 
-**Run locally:**
+**To Run locally:**
 
 ```bash
 streamlit run frontend.py
