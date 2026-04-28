@@ -7,3 +7,4 @@ scipy
 geopy
 folium
 streamlit-folium
+matplotlib
