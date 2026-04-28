@@ -81,7 +81,7 @@ def run_sweetspot():
     x1_times = nx.single_source_dijkstra_path_length(G, source=u1_start, weight='weight')
     x2_times = nx.single_source_dijkstra_path_length(G, source=u2_start, weight='weight')
     
-    MAX_COMMUTE, MAX_DELTA = 45, 15
+    MAX_COMMUTE, MAX_DELTA = 60, 7
     fair_stations = []
     for node in G.nodes():
         if node in x1_times and node in x2_times:
