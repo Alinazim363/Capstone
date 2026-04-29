@@ -65,7 +65,6 @@ Note - The GitHub repository should include all the prerequisite data.
 
 ```bash
 git clone <your-repo-url>
-cd sweetspot
 ```
 
 **2. Install dependencies**
