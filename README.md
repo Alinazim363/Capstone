@@ -2,6 +2,8 @@
 
 **SweetSpot** is a transit-aware meetup optimizer for New York City. Given two addresses, it uses the MTA subway graph to find the fairest meeting point, where neither person travels significantly longer than the other, then ranks nearby venues by semantic similarity to a natural-language "vibe" query.
 
+**Disclaimer** SweetSpot only works with addresses located in Manhattan.
+
 > **Live Web App:** [sweetspotcapstone.streamlit.app](https://sweetspotcapstone.streamlit.app/)
 
 ---

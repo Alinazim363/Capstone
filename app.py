@@ -9,6 +9,9 @@ import networkx as nx
 from NetworkGraph import G
 from geocoding import get_coordinates, find_nearest_station
 
+
+# ONLY WORKS IN MANHATTAN - USE MANHATTAN ADDRESSES
+
 # --- 1. INITIALIZE THE NLP MODEL ---
 print("Loading SweetSpot Semantic Engine...")
 model = SentenceTransformer('all-distilroberta-v1')
