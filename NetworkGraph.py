@@ -52,6 +52,7 @@ for index, row in walking_transfers.iterrows():
                         edge_type='walking_transfer'
                     )
 
+# add subway transit edges with travel time as weight and routes as edge attributes
 trips_df = pd.read_csv('gtfs/trips.txt')
 stop_times_df = pd.read_csv('gtfs/stop_times.txt')
 weekday_trips = trips_df[trips_df['service_id'].str.contains('Weekday', na=False, case=False)]

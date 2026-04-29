@@ -5,7 +5,7 @@ from scipy.spatial.distance import cosine
 from geopy.distance import geodesic
 import networkx as nx
 
-# Import your custom modules
+# Import custom modules
 from NetworkGraph import G
 from geocoding import get_coordinates, find_nearest_station
 
