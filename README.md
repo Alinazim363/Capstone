@@ -55,6 +55,8 @@ gtfs/
 
 MTA GTFS data can be downloaded from [mta.info/developers](https://new.mta.info/developers).
 
+Note - The GitHub repository should include all the prerequisite data.
+
 ---
 
 ## Installation
