@@ -4,7 +4,7 @@
 
 **Disclaimer** - SweetSpot only works with addresses located in Manhattan.
 
-**Link to GitHub Repo** - [github.com/Alinazim363/Capstone] (https://github.com/Alinazim363/Capstone/)
+**Link to GitHub Repo** - https://github.com/Alinazim363/Capstone
 
 > **Live Web App:** [sweetspotcapstone.streamlit.app](https://sweetspotcapstone.streamlit.app/)
 
