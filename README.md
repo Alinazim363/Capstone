@@ -87,8 +87,8 @@ python3 app.py
 You will be prompted for:
 
 ```
-User 1 Address: 14th St and 6th Ave, New York
-User 2 Address: 86th St and Lexington Ave, New York
+User 1 Address: 14th St 6th Ave, New York
+User 2 Address: 86th St Lexington Ave, New York
 Describe the vibe: a quiet wine bar for a first date
 ```
 
