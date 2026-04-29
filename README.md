@@ -90,6 +90,8 @@ User 2 Address: 86th St and Lexington Ave, New York
 Describe the vibe: a quiet wine bar for a first date
 ```
 
+PLEASE USE ADDRESSES WITHIN MANHATTAN
+
 The app will output the **Top 10 venue recommendations** ranked by vibe match, along with transit hub names and commute times for both users. You can then select any result to get full step-by-step A\* subway directions for both users.
 
 ---
