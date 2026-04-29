@@ -6,7 +6,7 @@
 
 **Link to GitHub Repo** - https://github.com/Alinazim363/Capstone
 
-> **Live Web App:** [sweetspotcapstone.streamlit.app](https://sweetspotcapstone.streamlit.app/)
+**Live Web App:** https://sweetspotcapstone.streamlit.app
 
 ---
 
